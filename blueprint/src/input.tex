@@ -1,0 +1,127 @@
+% In this file you should put the actual content of the blueprint.
+% It will be used both by the web and the print version.
+% It should *not* include the \begin{document}
+%
+% If you want to split the blueprint content into several files then
+% the current file can be a simple sequence of \input. Otherwise It
+% can start with a \section or \chapter for instance.
+
+Among all polynomial sequences, the following two seem to be most distinguished: the sequence of the
+power maps $x^{n}$ and the sequence of the Chebyshev polynomials $T_{n}(x)$, defined either by the
+property $T_{n}(\cos(\theta))=\cos(n\theta)$, or recursively
+$T_{0}(x)=1$, $T_{1}(x)=x$, $T_{n+2}(x)=2xT_{n+1}(x)-T_{n}(x)$.
+
+Their best known mutual property is probably the composition identity, which we state here for the
+Chebyshev polynomials: \[T_{n}(T_{m}(x))=T_{m}(T_{n}(x))=T_{mn}(x).\]
+
+In this paper we investigate such property -- namely, we prove the Chebyshev polynomials analogue
+of Zsigmondy's Theorem.
+
+Zsigmondy's Theorem says for which natural numbers $a,n>1$ there is a prime divisor $p$ of $a^{n}-1$ that does not divide any of the numbers $a^{d}-1$,  $d<n$ (such primes are called \textit{primitive prime divisors}) or, equivalently, there is a prime number $p$ such that the multiplicative order $\ord_{p}(a)$ equals $n$.
+
+The above mentioned link between the power maps and the Chebyshev polynomials evoke the question whether we could replace $a^{n}$ in Zsigmondy's Theorem by $T_{n}(a)$. Our answer is  Theorem \ref{Satz-2}; in order to formulate it we have to introduce the following Chebyshevian analogue of the multiplicative order. For an integer $a$ and a prime number $p$ denote \footnote{Since most Latin and Greek characters are already used in number theory notation, we find the choice of Cyrillic character $\letterche$ (the lowercase of the letter Che) to be appropriate.}
+\[\Che (a)=\min \left\lbrace m\in\Z_{>0}\, \colon \, T_{m}(a) \equiv  1 \mod p \right\rbrace ;\]
+this quantity always exists by Lemma \ref{LFT}.
+
+\begin{thm}\label{Satz-2}
+	Let $n$ and $a$  be integers such that $n>0$.  There exists a prime number $p$ such that $n=\Che(a)$,
+	except in the following cases:
+	\begin{itemize}
+		\item $a=1$ and $n>1$,
+		\item $a=0$ and $n\notin\left\lbrace 2,4\right\rbrace $,
+		\item $a=-1$ and $n>2$,
+		\item $n=1$ and $a\in \left\lbrace0,2 \right\rbrace $,
+		\item $n=2$ and $a=\pm 2^{\alpha-1}-1$,
+		\item $n=3$ and $a=\tfrac{1}{2}(\pm 3^{\alpha}-1)$,
+		\item $n=4$ and $a=\pm 2^{\alpha-1}$,
+		\item $n=6$ and $a=\tfrac{1}{2}(\pm 3^{\alpha}+1)$,
+	\end{itemize}
+	where $\alpha$ runs through positive integers.
+\end{thm}
+
+\begin{prop}\label{RivExer}
+	If $a,b$ are nonnegative integers, then
+	\[(T_{a+b}(x)-1)(T_{\left|a-b \right| }(x)-1)=(T_{a}(x)-T_{b}(x))^2.\]
+\end{prop}
+
+The following lemma is the analogue of Fermat's little theorem for Chebyshev polynomials.
+\begin{lem}\label{LFT}
+	Let $p$ be an odd prime number. For every integer $x$
+	\[ T_{p-1}(x)\equiv 1 \mod p \text{  \,\,\, or \,\,\,  }  T_{p+1}(x)\equiv 1 \mod p.\]
+	For every integer $x$
+	\[ T_{2}(x)\equiv 1 \mod 2. \]
+\end{lem}
+
+\begin{lem}\label{ChebOrd}
+	Let $p$ be a prime number and $x$ be an integer. Let $m$ be the smallest positive integer such that $T_{m}(x) \equiv  1 \mod p$.
+	Then $T_{n}(x) \equiv  1 \mod p$ for a positive integer $n$ if and only if $m \mid n$.
+\end{lem}
+
+Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the following.
+
+\begin{lem}\label{prop Che}
+	If $x$ is an integer and $p$ is an odd prime number then $\Che (x)$ divides $p-1$ or $p+1$. In particular, $\Che (x)$ and $p$ are coprime.
+	If $x$ is odd then $\CheOrd_{2}(x)=1$. If $x$ is even then $\CheOrd_{2}(x)=2$.
+\end{lem}
+
+\begin{lem}\label{inrtocyc}
+	For every $n\ge 1$
+	\[T_{n}(x)-1=\prod_{d \mid n}\C_{d}^{\sigma_{d}}(x)\]
+	where $\C_{1}(x)=x-1$ and for $d\ge 2$
+	\[\C_{d}(x)=\prod_{
+		\substack{
+			1\le k \le \frac{d}{2}\\
+			\gcd(k,d)=1}}2(x-\cos\tfrac{2 k \pi}{d})\]
+	and \[\sigma_{d}= \left\{
+	\begin{array}{rl}
+		1 & \text{if } d=1,2,\\
+		2 & \text{if } d >2.
+	\end{array} \right.\]
+\end{lem}
+
+\begin{prop}\label{omegas prop b}
+	Let $m, n$ be positive integers.
+	Then the polynomial $\C_{mn}$ is a divisor of $\C_{n}(T_{m}(x))$.
+	If moreover $n\ge 3$ and every prime divisor of $m$ divides $n$, then $\C_{mn}=\C_{n}(T_{m}(x))$.
+\end{prop}
+
+\begin{prop}\label{omega odd}
+	Let $n$ be an odd natural number. Then $\C_{n}(0)=\pm 1$.
+	If moreover $n\ge 3$ then $\C_{2n}(x)=\pm\C_{n}(-x)$.
+\end{prop}
+
+\begin{prop}\label{poly square int}
+	Let $\mathbb{K}$ be a field of characteristic $0$. Suppose that $P\in \mathbb{K}[x]$, $P(0)=\pm 1$,
+	and $P^{2}\in \Z[x]$. Then $P\in \Z[x]$.
+\end{prop}
+
+\begin{lem}\label{Omega integral}
+	$\C_{n}\in \Z[x]$.
+\end{lem}
+
+\begin{cor}\label{if T then Omega}
+	Let $x$ be an integer.
+	Every primitive prime divisor of $T_{n}(x)-1$ divides $\C_{n}(x)$.
+\end{cor}
+
+\begin{prop}\label{T on x plus one minus one by x}
+	For every natural number $n$ and every nonzero real number $x$
+	\[\frac{T_{n}(x+1)-1}{x}=n^2+\frac{n^2(n^2-1)}{6}x+\frac{n^2(n^2-1)(n^2-4)}{90}x^{2}+\ldots \in \Z[x],\]
+	where the dots denote irrelevant terms.
+\end{prop}
+
+\begin{thm}\label{Satz 1}
+	Let $n$ and $a$  be integers such that $n>1$ and $\left| a\right| >1$. If $p$ is a prime number
+	dividing $\Cn$ then there exists a nonnegative integer $i$ such that $n=\Che(a)p^{i}$. If $i>0$,
+	then $p$ is the greatest prime divisor of $n$. If moreover $p^2 \mid \Cn$ then either $p=2$ and
+	$n\in\left\lbrace 2,4\right\rbrace$, or $p=3$ and $n\in\left\lbrace 3,6\right\rbrace $.
+\end{thm}
+
+\begin{cor}\label{wniosek}
+	Let $n$ and $a$  be integers such that $n>1$ and $\left| a\right| >1$. The following statements are equivalent.
+	\begin{enumerate}[label={\text{S}\arabic*}]
+		\item \label{TFAE1} A prime number $p$ such that $n=\Che(a)$ does not exist.
+		\item \label{TFAE2} $\left| \Cn \right|$  is a power of a prime number dividing $n$.
+		\item \label{TFAE3} $\left| \Cn \right|$  is a power of the greatest prime divisor of $n$.
+	\end{enumerate}
+\end{cor}
