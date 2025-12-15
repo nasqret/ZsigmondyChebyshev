@@ -16,18 +16,25 @@
 
 \usepackage{expl3}
 
-\usepackage{amssymb, amsthm, mathtools}
+\usepackage{amssymb, amsthm, mathtools, lineno}
 \usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=magenta, citecolor=blue]{hyperref}
 
 \usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\usepackage{enumitem}
 
 \input{macros/common}
 \input{macros/print}
 
-\title{ZsigmondyChebyshev}
-\author{nasqret}
+\title{Zsigmondy's Theorem for Chebyshev Polynomials}
+\author{Bartosz Naskręcki}
 
 \begin{document}
 \maketitle
+\begin{abstract}
+  For an integer $a$ consider the divisibility sequence $s_{n}=T_{n}(a)-1$ defined by the
+  Chebyshev polynomials $T_{n}$. We list all values of $a$ and $n$ for which the
+  term $s_{n}$ has no primitive prime divisor. This result is a pendant to the classic
+  Zsigmondy's Theorem, an analogous result for power maps.
+\end{abstract}
 \input{content}
 \end{document}
