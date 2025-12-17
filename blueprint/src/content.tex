@@ -17,9 +17,17 @@ Chebyshev polynomials: \[T_{n}(T_{m}(x))=T_{m}(T_{n}(x))=T_{mn}(x).\]
 In this paper we investigate such property -- namely, we prove the Chebyshev polynomials analogue
 of Zsigmondy's Theorem.
 
-Zsigmondy's Theorem says for which natural numbers $a,n>1$ there is a prime divisor $p$ of $a^{n}-1$ that does not divide any of the numbers $a^{d}-1$,  $d<n$ (such primes are called \textit{primitive prime divisors}) or, equivalently, there is a prime number $p$ such that the multiplicative order $\ord_{p}(a)$ equals $n$.
+Zsigmondy's Theorem says for which natural numbers $a,n>1$ there is a prime divisor $p$ of $a^{n}-1$
+that does not divide any of the numbers $a^{d}-1$,  $d<n$ (such primes are called
+\textit{primitive prime divisors}) or, equivalently, there is a prime number $p$ such that the
+multiplicative order $\ord_{p}(a)$ equals $n$.
 
-The above mentioned link between the power maps and the Chebyshev polynomials evoke the question whether we could replace $a^{n}$ in Zsigmondy's Theorem by $T_{n}(a)$. Our answer is  Theorem \ref{Satz-2}; in order to formulate it we have to introduce the following Chebyshevian analogue of the multiplicative order. For an integer $a$ and a prime number $p$ denote \footnote{Since most Latin and Greek characters are already used in number theory notation, we find the choice of Cyrillic character $\letterche$ (the lowercase of the letter Che) to be appropriate.}
+The above mentioned link between the power maps and the Chebyshev polynomials evoke the question
+whether we could replace $a^{n}$ in Zsigmondy's Theorem by $T_{n}(a)$. Our answer is
+Theorem \ref{Satz-2}; in order to formulate it we have to introduce the following Chebyshevian analogue
+of the multiplicative order. For an integer $a$ and a prime number $p$ denote
+\footnote{Since most Latin and Greek characters are already used in number theory notation, we find
+the choice of Cyrillic character $\letterche$ (the lowercase of the letter Che) to be appropriate.}
 \[\Che (a)=\min \left\lbrace m\in\Z_{>0}\, \colon \, T_{m}(a) \equiv  1 \mod p \right\rbrace ;\]
 this quantity always exists by Lemma \ref{LFT}.
 
@@ -27,8 +35,8 @@ this quantity always exists by Lemma \ref{LFT}.
 	\lean{Satz_2}
 	\uses{is_primitive_prime_divisor_Chebyshev, is_exception_Satz2}
 	\leanok
-	Let $n$ and $a$  be integers such that $n>0$.  There exists a prime number $p$ such that $n=\Che(a)$,
-	except in the following cases:
+	Let $n$ and $a$  be integers such that $n>0$.  There exists a prime number $p$ such
+	that $n=\Che(a)$, except in the following cases:
 	\begin{itemize}
 		\item $a=1$ and $n>1$,
 		\item $a=0$ and $n\notin\left\lbrace 2,4\right\rbrace $,
@@ -65,7 +73,8 @@ The following lemma is the analogue of Fermat's little theorem for Chebyshev pol
 	\lean{ChebOrd}
 	\uses{Che}
 	\leanok
-	Let $p$ be a prime number and $x$ be an integer. Let $m$ be the smallest positive integer such that $T_{m}(x) \equiv  1 \mod p$.
+	Let $p$ be a prime number and $x$ be an integer. Let $m$ be the smallest positive integer
+	such that $T_{m}(x) \equiv  1 \mod p$.
 	Then $T_{n}(x) \equiv  1 \mod p$ for a positive integer $n$ if and only if $m \mid n$.
 \end{lem}
 
@@ -75,7 +84,8 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 	\lean{prop_Che}
 	\uses{Che}
 	\leanok
-	If $x$ is an integer and $p$ is an odd prime number then $\Che (x)$ divides $p-1$ or $p+1$. In particular, $\Che (x)$ and $p$ are coprime.
+	If $x$ is an integer and $p$ is an odd prime number then $\Che (x)$ divides $p-1$ or $p+1$.
+	In particular, $\Che (x)$ and $p$ are coprime.
 	If $x$ is odd then $\CheOrd_{2}(x)=1$. If $x$ is even then $\CheOrd_{2}(x)=2$.
 \end{lem}
 
@@ -149,7 +159,8 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 \end{prop}
 
 \begin{thm}\label{Satz-1}
-	\lean{Satz_1_part1,Satz_1_part2, Satz_1_part3_ge_5, Satz_1_part3_p_eq_3_corrected, Satz_1_part3_p_eq_2_corrected}
+	\lean{Satz_1_part1,Satz_1_part2, Satz_1_part3_ge_5, Satz_1_part3_p_eq_3_corrected,
+		Satz_1_part3_p_eq_2_corrected}
 	\uses{OmegaZ, Che, max_prime_divisor, multiplicity}
 	\leanok
 	Let $n$ and $a$  be integers such that $n>1$ and $\left| a\right| >1$. If $p$ is a prime number
