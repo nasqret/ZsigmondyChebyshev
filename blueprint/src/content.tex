@@ -24,8 +24,8 @@ The above mentioned link between the power maps and the Chebyshev polynomials ev
 this quantity always exists by Lemma \ref{LFT}.
 
 \begin{thm}\label{Satz-2}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+	\lean{Satz_2}
+	\uses{is_primitive_prime_divisor_Chebyshev, is_exception_Satz2}
 	\leanok
 	Let $n$ and $a$  be integers such that $n>0$.  There exists a prime number $p$ such that $n=\Che(a)$,
 	except in the following cases:
@@ -43,8 +43,8 @@ this quantity always exists by Lemma \ref{LFT}.
 \end{thm}
 
 \begin{prop}\label{RivExer}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+	\lean{RivExer}
+	%\uses{PUT HERE THE LATEX DECLARATIONS USED IN THIS ENV}
 	\leanok
 	If $a,b$ are nonnegative integers, then
 	\[(T_{a+b}(x)-1)(T_{\left|a-b \right| }(x)-1)=(T_{a}(x)-T_{b}(x))^2.\]
@@ -52,8 +52,8 @@ this quantity always exists by Lemma \ref{LFT}.
 
 The following lemma is the analogue of Fermat's little theorem for Chebyshev polynomials.
 \begin{lem}\label{LFT}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+	\lean{LFT}
+	%\uses{PUT HERE THE LATEX DECLARATIONS USED IN THIS ENV}
 	\leanok
 	Let $p$ be an odd prime number. For every integer $x$
 	\[ T_{p-1}(x)\equiv 1 \mod p \text{  \,\,\, or \,\,\,  }  T_{p+1}(x)\equiv 1 \mod p.\]
@@ -62,8 +62,8 @@ The following lemma is the analogue of Fermat's little theorem for Chebyshev pol
 \end{lem}
 
 \begin{lem}\label{ChebOrd}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+	\lean{ChebOrd}
+	\uses{Che}
 	\leanok
 	Let $p$ be a prime number and $x$ be an integer. Let $m$ be the smallest positive integer such that $T_{m}(x) \equiv  1 \mod p$.
 	Then $T_{n}(x) \equiv  1 \mod p$ for a positive integer $n$ if and only if $m \mid n$.
@@ -71,17 +71,17 @@ The following lemma is the analogue of Fermat's little theorem for Chebyshev pol
 
 Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the following.
 
-\begin{lem}\label{prop Che}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{lem}\label{prop-Che}
+	\lean{prop_Che}
+	\uses{Che}
 	\leanok
 	If $x$ is an integer and $p$ is an odd prime number then $\Che (x)$ divides $p-1$ or $p+1$. In particular, $\Che (x)$ and $p$ are coprime.
 	If $x$ is odd then $\CheOrd_{2}(x)=1$. If $x$ is even then $\CheOrd_{2}(x)=2$.
 \end{lem}
 
 \begin{lem}\label{inrtocyc}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+	\lean{inrtocyc}
+	\uses{Omega, sigma}
 	\leanok
 	For every $n\ge 1$
 	\[T_{n}(x)-1=\prod_{d \mid n}\C_{d}^{\sigma_{d}}(x)\]
@@ -97,60 +97,60 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 	\end{array} \right.\]
 \end{lem}
 
-\begin{prop}\label{omegas prop b}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{prop}\label{omegas-prop-b}
+	\lean{omegas_prop_b}
+	\uses{Omega}
 	\leanok
 	Let $m, n$ be positive integers.
 	Then the polynomial $\C_{mn}$ is a divisor of $\C_{n}(T_{m}(x))$.
 	If moreover $n\ge 3$ and every prime divisor of $m$ divides $n$, then $\C_{mn}=\C_{n}(T_{m}(x))$.
 \end{prop}
 
-\begin{prop}\label{omega odd}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{prop}\label{omega-odd}
+	\lean{omega_odd}
+	\uses{Omega}
 	\leanok
 	Let $n$ be an odd natural number. Then $\C_{n}(0)=\pm 1$.
 	If moreover $n\ge 3$ then $\C_{2n}(x)=\pm\C_{n}(-x)$.
 \end{prop}
 
 
-\begin{prop}\label{poly square int}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{prop}\label{poly-square-int}
+	\lean{poly_square_int}
+	%\uses{PUT HERE THE LATEX DECLARATIONS USED IN THIS ENV}
 	\leanok
 	Let $\mathbb{K}$ be a field of characteristic $0$. Suppose that $P\in \mathbb{K}[x]$, $P(0)=\pm 1$,
 	and $P^{2}\in \Z[x]$. Then $P\in \Z[x]$.
 \end{prop}
 
 
-\begin{lem}\label{Omega integral}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{lem}\label{Omega-integral}
+	\lean{Omega_integral}
+	\uses{IsIntPoly}
 	\leanok
 	$\C_{n}\in \Z[x]$.
 \end{lem}
 
-\begin{cor}\label{if T then Omega}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{cor}\label{if-T-then-Omega}
+	\lean{if_T_then_Omega}
+	\uses{is_primitive_prime_divisor_Chebyshev, OmegaZ}
 	\leanok
 	Let $x$ be an integer.
 	Every primitive prime divisor of $T_{n}(x)-1$ divides $\C_{n}(x)$.
 \end{cor}
 
-\begin{prop}\label{T on x plus one minus one by x}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{prop}\label{T-on-x-plus-one-minus-one-by-x}
+	\lean{T_on_x_plus_one_minus_one_by_x}
+	\uses{IsIntPoly}
 	\leanok
 	For every natural number $n$ and every nonzero real number $x$
 	\[\frac{T_{n}(x+1)-1}{x}=n^2+\frac{n^2(n^2-1)}{6}x+\frac{n^2(n^2-1)(n^2-4)}{90}x^{2}+\ldots \in \Z[x],\]
 	where the dots denote irrelevant terms.
 \end{prop}
 
-\begin{thm}\label{Satz 1}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+\begin{thm}\label{Satz-1}
+	\lean{Satz_1_part1,Satz_1_part2, Satz_1_part3_ge_5, Satz_1_part3_p_eq_3_corrected, Satz_1_part3_p_eq_2_corrected}
+	\uses{OmegaZ, Che, max_prime_divisor, multiplicity}
 	\leanok
 	Let $n$ and $a$  be integers such that $n>1$ and $\left| a\right| >1$. If $p$ is a prime number
 	dividing $\Cn$ then there exists a nonnegative integer $i$ such that $n=\Che(a)p^{i}$. If $i>0$,
@@ -159,8 +159,8 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 \end{thm}
 
 \begin{cor}\label{wniosek}
-	%\lean{PUT HERE THE LEAN DECLARATIONS}
-	%\uses{PUT HERE THE LEAN DECLARATIONS USED IN THIS ENV}
+	\lean{wniosek}
+	\uses{OmegaZ,Che, is_primitive_prime_divisor_Chebyshev, max_prime_divisors, Satz_1_part1, Satz_1_part2}
 	\leanok
 	Let $n$ and $a$  be integers such that $n>1$ and $\left| a\right| >1$. The following statements are equivalent.
 	\begin{enumerate}[label={\text{S}\arabic*}]

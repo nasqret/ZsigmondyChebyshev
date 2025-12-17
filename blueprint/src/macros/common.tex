@@ -19,8 +19,22 @@
 % \newtheorem{definition}[theorem]{Definition}
 
 % Define the Cyrillic letter "che" (ч) using a font that supports it
-\newfontfamily{\cyrillicfont}{Times New Roman}
-\newcommand{\letterche}{\text{{\cyrillicfont ч}}}
+%\newfontfamily{\cyrillicfont}{Times New Roman}
+%\usepackage{fontspec}
+%\setmainfont{TeX Gyre Termes}
+%\newfontfamily\cyrillicfont{TeX Gyre Termes}[Script=Cyrillic]
+%$\usepackage{fontspec}
+
+% Latin/main text
+%\setmainfont{TeX Gyre Termes}
+
+% Cyrillic (pick ONE that exists on your system)
+%\newfontfamily\cyrillicfont{DejaVu Serif}[
+%  Script=Cyrillic
+%]
+
+%\newcommand{\letterche}{\text{{\cyrillicfont ч}}}
+\newcommand{\letterche}{\text{Che}}
 
 \newtheorem{cor}{Corollary}
 \newtheorem{thm}[cor]{Theorem}
