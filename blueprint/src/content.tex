@@ -6,6 +6,8 @@
 % the current file can be a simple sequence of \input. Otherwise It
 % can start with a \section or \chapter for instance.
 
+\chapter{Introduction}
+
 Among all polynomial sequences, the following two seem to be most distinguished: the sequence of the
 power maps $x^{n}$ and the sequence of the Chebyshev polynomials $T_{n}(x)$, defined either by the
 property $T_{n}(\cos(\theta))=\cos(n\theta)$, or recursively
@@ -49,6 +51,7 @@ this quantity always exists by Lemma \ref{LFT}.
 	where $\alpha$ runs through positive integers.
 \end{thm}
 
+\chapter{Preliminary results}
 \begin{prop}\label{RivExer}
 	\lean{RivExer}
 	\leanok
@@ -117,14 +120,12 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 	If moreover $n\ge 3$ then $\C_{2n}(x)=\pm\C_{n}(-x)$.
 \end{prop}
 
-
 \begin{prop}\label{poly-square-int}
 	\lean{poly_square_int}
 	\leanok
 	Let $\mathbb{K}$ be a field of characteristic $0$. Suppose that $P\in \mathbb{K}[x]$, $P(0)=\pm 1$,
 	and $P^{2}\in \Z[x]$. Then $P\in \Z[x]$.
 \end{prop}
-
 
 \begin{lem}\label{Omega-integral}
 	\lean{Omega_integral}
@@ -146,6 +147,8 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 	\[\frac{T_{n}(x+1)-1}{x}=n^2+\frac{n^2(n^2-1)}{6}x+\frac{n^2(n^2-1)(n^2-4)}{90}x^{2}+\ldots \in \Z[x],\]
 	where the dots denote irrelevant terms.
 \end{prop}
+
+\chapter{Major results on \texorpdfstring{$\C$}{C}'s}
 
 \begin{thm}\label{Satz-1}
 	\lean{Satz_1_part1,Satz_1_part2, Satz_1_part3_ge_5, Satz_1_part3_p_eq_3_corrected,
