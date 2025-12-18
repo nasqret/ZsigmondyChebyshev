@@ -1733,7 +1733,11 @@ lemma IsIntPoly_div_by_monic (P Q : Polynomial ℝ) (hP : IsIntPoly P) (hQ : IsI
       · exact Int.cast_injective;
       · rw [ Polynomial.Monic, Polynomial.leadingCoeff_map_of_leadingCoeff_ne_zero ] at hQ_monic <;> aesop;
     exact h_div_int;
-  sorry
+  -- Since $P_int = Q_int * S$ and $P_int$ is an integer polynomial, $S$ must also be an integer polynomial.
+  have hS_int : IsIntPoly (Polynomial.map (Int.castRingHom ℝ) S) := by
+    intro k; aesop;
+  have := hQ_monic; aesop; (
+  rw [ mul_div_cancel_left₀ _ this.ne_zero ] ; aesop;)
 
 /-
 Correct definition of Psi_mod.
