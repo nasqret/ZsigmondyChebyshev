@@ -33,7 +33,7 @@ the choice of Cyrillic character $\letterche$ (the lowercase of the letter Che) 
 \[\Che (a)=\min \left\lbrace m\in\Z_{>0}\, \colon \, T_{m}(a) \equiv  1 \mod p \right\rbrace ;\]
 this quantity always exists by Lemma \ref{LFT}.
 
-\begin{thm}\label{Satz-2}
+\begin{theorem}\label{Satz-2}
 	\lean{Satz_2}
 	\leanok
 	Let $n$ and $a$  be integers such that $n>0$.  There exists a prime number $p$ such
@@ -49,46 +49,46 @@ this quantity always exists by Lemma \ref{LFT}.
 		\item $n=6$ and $a=\tfrac{1}{2}(\pm 3^{\alpha}+1)$,
 	\end{itemize}
 	where $\alpha$ runs through positive integers.
-\end{thm}
+\end{theorem}
 
 \chapter{Preliminary results}
-\begin{prop}\label{RivExer}
+\begin{proposition}\label{RivExer}
 	\lean{RivExer}
 	\leanok
 	If $a,b$ are nonnegative integers, then
 	\[(T_{a+b}(x)-1)(T_{\left|a-b \right| }(x)-1)=(T_{a}(x)-T_{b}(x))^2.\]
-\end{prop}
+\end{proposition}
 
 The following lemma is the analogue of Fermat's little theorem for Chebyshev polynomials.
 
-\begin{lem}\label{LFT}
+\begin{lemma}\label{LFT}
 	\lean{LFT}
 	\leanok
 	Let $p$ be an odd prime number. For every integer $x$
 	\[ T_{p-1}(x)\equiv 1 \mod p \,\,\, \text{or} \,\,\, T_{p+1}(x)\equiv 1 \mod p.\]
 	For every integer $x$
 	\[ T_{2}(x)\equiv 1 \mod 2. \]
-\end{lem}
+\end{lemma}
 
-\begin{lem}\label{ChebOrd}
+\begin{lemma}\label{ChebOrd}
 	\lean{ChebOrd}
 	\leanok
 	Let $p$ be a prime number and $x$ be an integer. Let $m$ be the smallest positive integer
 	such that $T_{m}(x) \equiv  1 \mod p$.
 	Then $T_{n}(x) \equiv  1 \mod p$ for a positive integer $n$ if and only if $m \mid n$.
-\end{lem}
+\end{lemma}
 
 Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the following.
 
-\begin{lem}\label{prop-Che}
+\begin{lemma}\label{prop-Che}
 	\lean{prop_Che}
 	\leanok
 	If $x$ is an integer and $p$ is an odd prime number then $\Che (x)$ divides $p-1$ or $p+1$.
 	In particular, $\Che (x)$ and $p$ are coprime.
 	If $x$ is odd then $\CheOrd_{2}(x)=1$. If $x$ is even then $\CheOrd_{2}(x)=2$.
-\end{lem}
+\end{lemma}
 
-\begin{lem}\label{inrtocyc}
+\begin{lemma}\label{inrtocyc}
 	\lean{inrtocyc}
 	\leanok
 	For every $n\ge 1$
@@ -103,54 +103,54 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 		1 & \text{if } d=1,2,\\
 		2 & \text{if } d >2.
 	\end{array} \right.\]
-\end{lem}
+\end{lemma}
 
-\begin{prop}\label{omegas-prop-b}
+\begin{proposition}\label{omegas-prop-b}
 	\lean{omegas_prop_b}
 	\leanok
 	Let $m, n$ be positive integers.
 	Then the polynomial $\C_{mn}$ is a divisor of $\C_{n}(T_{m}(x))$.
 	If moreover $n\ge 3$ and every prime divisor of $m$ divides $n$, then $\C_{mn}=\C_{n}(T_{m}(x))$.
-\end{prop}
+\end{proposition}
 
-\begin{prop}\label{omega-odd}
+\begin{proposition}\label{omega-odd}
 	\lean{omega_odd}
 	\leanok
 	Let $n$ be an odd natural number. Then $\C_{n}(0)=\pm 1$.
 	If moreover $n\ge 3$ then $\C_{2n}(x)=\pm\C_{n}(-x)$.
-\end{prop}
+\end{proposition}
 
-\begin{prop}\label{poly-square-int}
+\begin{proposition}\label{poly-square-int}
 	\lean{poly_square_int}
 	\leanok
 	Let $\mathbb{K}$ be a field of characteristic $0$. Suppose that $P\in \mathbb{K}[x]$, $P(0)=\pm 1$,
 	and $P^{2}\in \Z[x]$. Then $P\in \Z[x]$.
-\end{prop}
+\end{proposition}
 
-\begin{lem}\label{Omega-integral}
+\begin{lemma}\label{Omega-integral}
 	\lean{Omega_integral}
 	\leanok
 	$\C_{n}\in \Z[x]$.
-\end{lem}
+\end{lemma}
 
-\begin{cor}\label{if-T-then-Omega}
+\begin{corollary}\label{if-T-then-Omega}
 	\lean{if_T_then_Omega}
 	\leanok
 	Let $x$ be an integer.
 	Every primitive prime divisor of $T_{n}(x)-1$ divides $\C_{n}(x)$.
-\end{cor}
+\end{corollary}
 
-\begin{prop}\label{T-on-x-plus-one-minus-one-by-x}
+\begin{proposition}\label{T-on-x-plus-one-minus-one-by-x}
 	\lean{T_on_x_plus_one_minus_one_by_x}
 	\leanok
 	For every natural number $n$ and every nonzero real number $x$
 	\[\frac{T_{n}(x+1)-1}{x}=n^2+\frac{n^2(n^2-1)}{6}x+\frac{n^2(n^2-1)(n^2-4)}{90}x^{2}+\ldots \in \Z[x],\]
 	where the dots denote irrelevant terms.
-\end{prop}
+\end{proposition}
 
 \chapter{Major results on \texorpdfstring{$\C$}{C}'s}
 
-\begin{thm}\label{Satz-1}
+\begin{theorem}\label{Satz-1}
 	\lean{Satz_1_part1,Satz_1_part2, Satz_1_part3_ge_5, Satz_1_part3_p_eq_3_corrected,
 		Satz_1_part3_p_eq_2_corrected}
 	\leanok
@@ -158,9 +158,9 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 	dividing $\Cn$ then there exists a nonnegative integer $i$ such that $n=\Che(a)p^{i}$. If $i>0$,
 	then $p$ is the greatest prime divisor of $n$. If moreover $p^2 \mid \Cn$ then either $p=2$ and
 	$n\in\left\lbrace 2,4\right\rbrace$, or $p=3$ and $n\in\left\lbrace 3,6\right\rbrace $.
-\end{thm}
+\end{theorem}
 
-\begin{cor}\label{wniosek}
+\begin{corollary}\label{wniosek}
 	\lean{wniosek}
 	\leanok
 	Let $n$ and $a$  be integers such that $n>1$ and $\left| a\right| >1$. The following statements are equivalent.
@@ -169,4 +169,4 @@ Lemmas \ref{LFT} and \ref{ChebOrd} together with $T_{1}(x)=x$  give the followin
 		\item \label{TFAE2} $\left| \Cn \right|$  is a power of a prime number dividing $n$.
 		\item \label{TFAE3} $\left| \Cn \right|$  is a power of the greatest prime divisor of $n$.
 	\end{enumerate}
-\end{cor}
+\end{corollary}

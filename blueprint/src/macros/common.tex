@@ -36,13 +36,15 @@
 %\newcommand{\letterche}{\text{{\cyrillicfont ч}}}
 \newcommand{\letterche}{\text{Che}}
 
-\newtheorem{cor}{Corollary}
-\newtheorem{thm}[cor]{Theorem}
-\newtheorem{lem}[cor]{Lemma}
-\newtheorem{prop}[cor]{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{human_theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{human_lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 
-\theoremstyle{remark}
-\newtheorem{rem}[cor]{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
 
 \newcommand{\C}{\Omega}
 \newcommand{\Cn}{\C_{n}(a)}
